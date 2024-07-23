@@ -1,0 +1,26 @@
+# modules
+node_modules
+src
+
+# dotenv environment variables file
+.env
+.env.test
+.env.local
+.env.prod
+.env.dev
+
+# lock file
+yarn.lock
+package-lock.json
+
+# malicous
+.eslintgnore
+.eslintrc.json
+.pretiergnore
+.pretierrc
+babel.config
+jest.config.ts
+postcss.config.js
+rollup.config.js
+tailwind.config.js
+tsconfig.json

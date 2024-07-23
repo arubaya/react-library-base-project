@@ -1,0 +1,14 @@
+# modules
+node_modules
+dist
+
+# dotenv environment variables file
+.env
+.env.test
+.env.local
+.env.prod
+.env.dev
+
+# lock file
+yarn.lock
+package-lock.json

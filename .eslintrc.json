@@ -1,0 +1,80 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "overrides": [],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json",
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint"],
+  "rules": {
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "import/prefer-default-export": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsForRegex": ["^state"]
+      }
+    ], // https://github.com/immerjs/immer/issues/189
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": ["__new", "__isNew__"]
+      }
+    ],
+    "react/jsx-props-no-spreading": "off",
+    "react/require-default-props": "off",
+    "react/prop-types": "off",
+    "react/jsx-no-useless-fragment": "off",
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "label-has-associated-control": "off",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "default",
+        "format": null,
+        "leadingUnderscore": "allowSingleOrDouble"
+      }
+    ],
+    "no-console": [
+      "off",
+      {
+        "allow": []
+      }
+    ],
+    "react-hooks/exhaustive-deps": "warn",
+    "no-plusplus": "off",
+    "jsx-a11y/no-noninteractive-tabindex": "off", // daisy UI need tabindex on li
+    "no-empty-pattern": "off", // only use redirect from useUser
+    "no-unused-vars": [
+      "error",
+      { "varsIgnorePattern": "__", "argsIgnorePattern": "__" }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "varsIgnorePattern": "__", "argsIgnorePattern": "__" }
+    ]
+  }
+}
